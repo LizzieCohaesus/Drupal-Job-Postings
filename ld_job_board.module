@@ -5,3 +5,24 @@
  */
 
 include_once 'ld_job_board.features.inc';
+
+//Add css file to my blog
+function ld_job_board_init(){
+	drupal_add_css(drupal_get_path('module','ld_job_board').'/ld_job_board.css');
+}
+
+function ld_job_board_permission(){
+	return array(
+		'administer job board' => array(
+			'title' => t('Adminster job board posts')
+		),
+	);
+}
+
+function ld_job_board_form_job_postings_node_form_alter(&$form, &$form_state){
+	unset($form['options']['#group']);
+	
+	if(user_access('administer job board')){
+		$form['options']['#access'] = true;
+	}
+}

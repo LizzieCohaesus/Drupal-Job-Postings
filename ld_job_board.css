@@ -1,0 +1,11 @@
+.view-job-board tr {
+	background:none;
+}
+
+.view-job-board {
+	background-color: #42A5E1;
+}
+
+.view-job-board, .view-job-board a {
+	color: white;
+}
