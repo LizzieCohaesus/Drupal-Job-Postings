@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Job Board feature.
+ */
+
+include_once 'ld_job_board.features.inc';
